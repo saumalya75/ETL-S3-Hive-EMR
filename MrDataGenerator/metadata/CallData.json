@@ -1,0 +1,77 @@
+{
+  "filePathName": "/Volumes/WorkSpace/POC/CloudArena/ETL-S3-Hive-EMR/data/CallData.csv",
+  "fileFormat": "delimited",
+  "columnDelimiter": "|",
+  "columns": [
+    {
+      "name": "CallId",
+      "type": "integer",
+      "minValue": 1,
+      "duplicateAllowed": "N",
+      "idColumn": "Y"
+    },
+    {
+      "name": "MonthId",
+      "type": "choice",
+      "choices": [
+        "201801",
+        "201802",
+        "201803",
+        "201804",
+        "201805",
+        "201806",
+        "201807",
+        "201808",
+        "201809",
+        "201810",
+        "201811",
+        "201812",
+        "201901",
+        "201902",
+        "201903",
+        "201904",
+        "201905",
+        "201906",
+        "201907",
+        "201908",
+        "201909",
+        "201910",
+        "201911",
+        "201912",
+        "202001",
+        "202002",
+        "202003",
+        "202004",
+        "202005",
+        "202006",
+        "202007",
+        "202008",
+        "202009",
+        "202010",
+        "202011",
+        "202012"
+      ],
+      "forEach": "Y",
+      "duplicateAllowed": "Y"
+    },
+    {
+      "name": "CallValue",
+      "type": "decimal",
+      "duplicateAllowed": "Y",
+      "minValue": 0.0,
+      "maxValue": 1000.0
+    },
+    {
+      "name": "RepId",
+      "type": "lookup",
+      "lookupFile": "/Volumes/WorkSpace/POC/CloudArena/ETL-S3-Hive-EMR/data/RepData.csv",
+      "lookupCol": "RepId",
+      "lookupDelimiter": "|",
+      "forEach": "Y",
+      "duplicateAllowed": "Y"
+    }
+  ],
+  "keyColumn": "CallId",
+  "tentativeFileSize": 20,
+  "maxRowCount": 10000000
+}

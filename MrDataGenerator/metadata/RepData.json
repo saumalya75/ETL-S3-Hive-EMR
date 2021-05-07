@@ -1,0 +1,45 @@
+{
+  "lookupFiles": {},
+  "filePathName": "/Volumes/WorkSpace/POC/CloudArena/ETL-S3-Hive-EMR/data/RepData.csv",
+  "fileFormat": "delimited",
+  "columnDelimiter": "|",
+  "columns": [
+    {
+      "name": "RepId",
+      "type": "integer",
+      "minValue": 100001,
+      "duplicateAllowed": "N",
+      "idColumn": "Y"
+    },
+    {
+      "name": "RepName",
+      "type": "string",
+      "length": 10,
+      "duplicateAllowed": "Y"
+    },
+    {
+      "name": "RepRating",
+      "type": "decimal",
+      "length": 10,
+      "duplicateAllowed": "Y",
+      "minValue": 7.0,
+      "maxValue": 10.0
+    },
+    {
+      "name": "RepCountry",
+      "type": "choice",
+      "choices": [
+        "IND",
+        "BAN",
+        "SRI",
+        "NEP",
+        "BHU",
+        "PAK"
+      ],
+      "duplicateAllowed": "Y"
+    }
+  ],
+  "keyColumn": "RepId",
+  "tentativeFileSize": 0.02,
+  "maxRowCount": 1000
+}
